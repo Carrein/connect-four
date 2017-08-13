@@ -20,7 +20,7 @@ class ConnectFour
 
     def game_manager
         puts "Welcome to Connect Four!"
-        while !@won || !@draw
+        while !@won && !@draw
             render
             insert(input)
             @won = wincon
@@ -109,5 +109,5 @@ class ConnectFour
 end
 
 
-#new_game = ConnectFour.new
-#new_game.game_manager
+new_game = ConnectFour.new
+new_game.game_manager
