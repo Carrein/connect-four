@@ -143,6 +143,18 @@ describe ConnectFour do
                 new_game.board[2][3] = " ◍ "
                 expect(new_game.wincon).to eql true
             end
+
+            it "@draw is set to true if top row is filled." do
+                new_game.board[0][0] = " ◍ "
+                new_game.board[0][1] = " ◍ "
+                new_game.board[0][2] = " ▦ "
+                new_game.board[0][3] = " ◍ "
+                new_game.board[0][4] = " ◍ "
+                new_game.board[0][5] = " ▦ "
+                new_game.board[0][6] = " ▦ "
+                new_game.wincon
+                expect(new_game.draw).to eql true
+            end
         end
     end
 end
